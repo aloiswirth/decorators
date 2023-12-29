@@ -1,5 +1,5 @@
 from time import perf_counter
-from functools import wraps
+from functools import wraps, lru_cache
 
 def timer(func):
     total = 0 # scope: timer()
@@ -17,6 +17,7 @@ def timer(func):
         return result
     return wrapper
 
+@lru_cache(maxsize=None)
 @timer
 def fib(n):
     '''Return the nth value from the Fiboanacci sequence'''
@@ -25,4 +26,4 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
-fib(18)
+fib(1000)

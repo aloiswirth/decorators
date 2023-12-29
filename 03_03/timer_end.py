@@ -2,6 +2,7 @@ from time import perf_counter
 from functools import wraps
 
 def timer(func):
+    '''Print the runtime of the decorated function'''
     @wraps(func)
     def wrapper(*args, **kwargs):
         start = perf_counter()
