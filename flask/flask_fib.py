@@ -9,3 +9,7 @@ def print_fib():
 @app.route('/fib')
 def list_fib():
     return '<b>1, 1, 2, 3, 5, 8, 13, 21 ...</b>'
+
+@app.route('/alo')
+def list_alo():
+    return '<b>It works like this as well</b>'
