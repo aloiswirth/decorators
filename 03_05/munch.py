@@ -1,5 +1,7 @@
 from functools import wraps
 
+def munch(start, end):
+    pass
 
 
 
