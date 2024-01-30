@@ -9,7 +9,7 @@ def timer(func):
         result = func(*args, **kwargs)
         end = perf_counter()
         duration = end - start
-        print(f'{func.__name__}({arg})  = {result} ->ran in {duration:.8f}s')
+        print(f'{func.__name__}({args})  = {result} ->ran in {duration:.8f}s')
         return result
     return wrapper
 
